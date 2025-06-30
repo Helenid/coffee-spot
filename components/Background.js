@@ -1,14 +1,15 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, View } from 'react-native';
+import { ImageBackground, StyleSheet,View } from 'react-native';
 
-const Background = ({ children }) => {
+const Background = ({ children, imageSource, style }) => {
   return (
     <ImageBackground
-      source={require('../../assets/onboardingImage.jpeg')}
-      style={styles.background}
+      source={imageSource || require('../assets/coffee.png')}
       resizeMode="cover"
+      style={[styles.background, style]}
     >
-      <View style={styles.overlay}>
+      <View style={styles.overlay}/>
+      <View style={styles.content}>
         {children}
       </View>
     </ImageBackground>
@@ -21,11 +22,12 @@ const styles = StyleSheet.create({
   background: {
     flex: 1,
   },
-  overlay: {
+   overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', 
+  },
+  content: {
     flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.4)',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingHorizontal: 20,
+    zIndex: 1, 
   },
 });
