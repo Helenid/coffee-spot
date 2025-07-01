@@ -7,6 +7,8 @@ import HomeScreen from "../screens/main/HomeScreen";
 import Favorite from "../screens/main/Favorite";
 import ProfileIndex from "../screens/main/ProfileIndex";
 import ForgetPassword from "../screens/auth/ForgetPassword";
+import CoffeeCard from "../components/CoffeeCard";
+import PromoCard from "../components/PromoCard";
 const Stack = createNativeStackNavigator();
 
 const AppNavigator = () => {
@@ -27,6 +29,8 @@ const AppNavigator = () => {
             <Stack.Screen component={Favorite} name="Favorite" />      
             <Stack.Screen component={ProfileIndex} name="ProfileIndex" />
             <Stack.Screen component={ForgetPassword} name="ForgetPassword" />
+            <Stack.Screen component={CoffeeCard} name="CoffeeCard" />
+            <Stack.Screen component={PromoCard} name="PromoCard" />
         </Stack.Navigator>
     )
 }
