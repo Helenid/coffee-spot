@@ -4,6 +4,7 @@ import HomeScreenBottomTab from '../../components/HomeScreenBottomTab';
 import { Ionicons } from '@expo/vector-icons'; 
 import CoffeeCard from '../../components/CoffeeCard';
 import PromoCard from '../../components/PromoCard';
+import { useNavigation } from '@react-navigation/native';
 
 
 const categories = [
@@ -25,7 +26,8 @@ const coffees = [
     rate: 5,
     price: '$3.60',
     label: 'With oat milk',
-    category:'Cappuccino'
+    category:'Cappuccino',
+    description: 'A creamy cappuccino with smooth oat milk and bold espresso flavor. Crafted with sustainability in mind, every cup supports ethical farming practices and fair trade communities. Indulge in this sensory journey and awaken your day with warmth, comfort, and sophistication in every sip.'
   },
   {
     id:2,
@@ -33,7 +35,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label: 'With milk',
-     category:'Cappuccino'
+     category:'Cappuccino',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso flavor.'
   },
   {
     id:3,
@@ -41,7 +44,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label:'With honey',
-     category:'Cappuccino'
+     category:'Cappuccino',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso flavor Crafted with sustainability in mind, every cup supports ethical farming practices and fair trade communities. Indulge in this sensory journey and awaken your day with warmth, comfort, and sophistication in every sip.'
   },
   {
     id:4,
@@ -49,7 +53,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label:'With honey',
-     category:'Latte'
+     category:'Latte',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso flavor.'
   },
   {
     id:5,
@@ -57,7 +62,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label:'With sugar',
-     category:'Latte'
+     category:'Latte',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso flavor. With its smooth texture and complex aroma, this coffee offers notes of dark chocolate, caramel, and a subtle hint of citrus. The medium roast strikes a perfect balance between boldness and brightness, making it ideal for both casual sippers and seasoned aficionados.'
   },
   {
     id:6,
@@ -65,7 +71,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label:'With sugar',
-     category:'Latte'
+     category:'Latte',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso flavor. Whether enjoyed black or with your choice of milk, it delivers a full-bodied experience with a lingering finish that leaves you wanting more'
   },
   {
     id:7,
@@ -73,7 +80,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label:'With sugar',
-     category:'Americano'
+     category:'Americano',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso flavor. Whether enjoyed black or with your choice of milk, it delivers a full-bodied experience with a lingering finish that leaves you wanting more.'
   },
   {
     id:8,
@@ -81,7 +89,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label:'With honey',
-     category:'Americano'
+     category:'Americano',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso flavor. Whether enjoyed black or with your choice of milk, it delivers a full-bodied experience with a lingering finish that leaves you wanting more.'
   },
   {
     id:9,
@@ -89,7 +98,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label:'With ice',
-     category:'Americano'
+     category:'Americano',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso flavor.'
   },
   {
     id:10,
@@ -97,7 +107,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label:'With honey',
-     category:'Espresso'
+     category:'Espresso',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso Whether enjoyed black or with your choice of milk, it delivers a full-bodied experience with a lingering finish that leaves you wanting more.'
   },
   {
     id:11,
@@ -105,7 +116,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label:'With honey',
-     category:'Espresso'
+     category:'Espresso',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso Whether enjoyed black or with your choice of milk, it delivers a full-bodied experience with a lingering finish that leaves you wanting more.'
   },
   {
     id:12,
@@ -113,7 +125,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label:'With honey',
-     category:'Espresso'
+     category:'Espresso',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso Whether enjoyed black or with your choice of milk, it delivers a full-bodied experience with a lingering finish that leaves you wanting more.'
   },
   {
     id:13,
@@ -121,7 +134,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label:'With honey',
-     category:'Mocha'
+     category:'Mocha',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso Whether enjoyed black or with your choice of milk, it delivers a full-bodied experience with a lingering finish that leaves you wanting more.'
   },
   {
     id:14,
@@ -129,7 +143,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label:'With honey',
-     category:'Mocha'
+     category:'Mocha',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso Whether enjoyed black or with your choice of milk, it delivers a full-bodied experience with a lingering finish that leaves you wanting more.'
   },
   {
     id:15,
@@ -137,7 +152,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label:'With honey',
-     category:'Mocha'
+     category:'Mocha',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso Whether enjoyed black or with your choice of milk, it delivers a full-bodied experience with a lingering finish that leaves you wanting more.'
   },
   {
     id:16,
@@ -145,7 +161,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label:'With ice',
-     category:'Mocha'
+     category:'Mocha',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso Whether enjoyed black or with your choice of milk, it delivers a full-bodied experience with a lingering finish that leaves you wanting more.'
   },
   {
     id:17,
@@ -153,7 +170,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label:'With milk',
-     category:'Cortado'
+     category:'Cortado',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso Whether enjoyed black or with your choice of milk, it delivers a full-bodied experience with a lingering finish that leaves you wanting more.'
   },
   {
     id:18,
@@ -161,7 +179,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label:'With milk',
-     category:'Cortado'
+     category:'Cortado',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso Whether enjoyed black or with your choice of milk, it delivers a full-bodied experience with a lingering finish that leaves you wanting more.'
   },
 
   {
@@ -170,7 +189,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label:'With milk',
-     category:'Cortado'
+     category:'Cortado',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso flavor.'
   },
   {
     id:21,
@@ -178,7 +198,8 @@ const coffees = [
     rate: 4.5,
     price: '$3.60',
     label:'With milk',
-     category:'Cortado'
+     category:'Cortado',
+     description: 'A creamy cappuccino with smooth oat milk and bold espresso flavor.'
   },
 
 ];
@@ -202,11 +223,13 @@ const coffeeShops = [
 ]
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedCoffee, setSelectedCoffee] = useState(null)
-  const [selectedId, setSelectedId] = useState(null)
+  const [selectedId, setSelectedId] = useState(null);
+  const [searchCoffee, setSearchCoffee] = useState('')
 
-  const filteredCoffee = selectedCategory === 'All' ? coffees : coffees.filter((coffee) => coffee.category === selectedCategory);
+  const coffeeCategory = selectedCategory === 'All' ? coffees : coffees.filter((coffee) => coffee.category === selectedCategory);
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -223,6 +246,8 @@ const HomeScreen = () => {
           <TextInput
             placeholder='Find your best coffee'
             style={styles.input}
+            value={searchCoffee}
+            onChangeText={(text) => setSearchCoffee(text)}
           />
         </View>
         {/*Categories */}
@@ -253,19 +278,21 @@ const HomeScreen = () => {
          <View>
           <FlatList 
             horizontal
-            data={filteredCoffee}
+            data={coffees}
             showsHorizontalScrollIndicator={false}
             keyExtractor={(item) => item.id.toString()}
             contentContainerStyle={{paddingHorizontal:10}}
             renderItem={({ item }) => (
-              <CoffeeCard 
-                image= {item.image}
-                category={item.category}
-                name={item.name}
-                price={item.price}
-                rate={item.rate}
-                label={item.label}
-              />
+              <TouchableOpacity onPress={() => navigation.navigate('CoffeeDetail', { item })}>
+                  <CoffeeCard 
+                    image= {item.image}
+                    category={item.category}
+                    name={item.name}
+                    price={item.price}
+                    rate={item.rate}
+                    label={item.label}
+                  />
+              </TouchableOpacity>
             )}
             ListEmptyComponent={
               <Text style={{textAlign:'center', fontSize: 18}}>This cup of Coffee has been exhausted.</Text>
@@ -305,6 +332,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 30,
     paddingHorizontal: 10,
+    backgroundColor:'#F0F0F0'
     
   },
   header: {
