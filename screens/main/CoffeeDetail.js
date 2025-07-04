@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#674736",
     padding: 15,
     borderRadius: 10,
-    width: '60%'
+    width: '100%'
   },
   orderButtonText: {
     color: '#fff',

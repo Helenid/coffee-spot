@@ -11,6 +11,8 @@ import CoffeeCard from "../components/CoffeeCard";
 import PromoCard from "../components/PromoCard";
 import CoffeeDetail from "../screens/main/CoffeeDetail";
 import ReviewOrder from "../screens/main/ReviewOrder";
+import PaymentMethod from "../screens/main/PaymentMethod";
+import BuyNow from "../screens/main/BuyNow";
 const Stack = createNativeStackNavigator();
 
 const AppNavigator = () => {
@@ -35,6 +37,8 @@ const AppNavigator = () => {
             <Stack.Screen component={PromoCard} name="PromoCard" />
             <Stack.Screen component={CoffeeDetail} name="CoffeeDetail" />
             <Stack.Screen component={ReviewOrder} name="ReviewOrder" />
+            <Stack.Screen component={PaymentMethod} name="PaymentMethod" />
+            <Stack.Screen component={BuyNow} name="BuyNow" />
         </Stack.Navigator>
     )
 }

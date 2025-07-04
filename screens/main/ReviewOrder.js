@@ -85,9 +85,11 @@ const ReviewOrder = ({ route, navigation}) => {
                     <View style={{justifyContent:'space-between', flexDirection:'row', alignItems:'center'}}>
                         <View>
                             <Text style={{fontWeight: 'bold', fontSize:16}}>Total:</Text>
-                            <Text style={{fontWeight: 'bold', fontSize:16}}>{totalPrice}</Text>
+                            <Text style={{fontWeight: 'bold', fontSize:16}}>${totalPrice}</Text>
                         </View>
-                        <TouchableOpacity style={styles.orderButton}>
+                        <TouchableOpacity style={styles.orderButton}
+                            onPress={() => navigation.navigate('PaymentMethod', { totalPrice })}
+                        >
                             <Text style={styles.orderButtonText}>Place Order</Text>
                         </TouchableOpacity>
 
