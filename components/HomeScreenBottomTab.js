@@ -22,6 +22,7 @@ const HomeScreenBottomTab = () => {
        paddingHorizontal: 20,
       }}
     >
+      
       <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
         <AntDesign name="home" size={24} color="#674736" />
       </TouchableOpacity>

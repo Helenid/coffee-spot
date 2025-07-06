@@ -119,7 +119,7 @@ const PaymentMethod = ({route, navigation}) => {
                 </View>
             </View>
 
-            </SafeAreaView>    
+     </SafeAreaView>    
   )
 }
 
