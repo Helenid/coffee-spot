@@ -86,7 +86,7 @@ const PaymentMethod = ({route, navigation}) => {
                             <Text style={{fontWeight:'bold', fontSize:16}}>Our Account Details</Text>
                             <View style={{flexDirection:'row', gap:20}}>
                                 <Text style={{fontWeight:'bold'}}>Bank Name:</Text>
-                                <Text>Providus Bank</Text>
+                                <Text>Providus Bank.</Text>
                             </View>
                             <View style={{flexDirection:'row', gap:20}}>
                                 <Text style={{fontWeight:'bold'}}>Account Number:</Text>
@@ -94,7 +94,7 @@ const PaymentMethod = ({route, navigation}) => {
                             </View>
                             <View style={{flexDirection:'row', gap:20}}>
                                 <Text style={{fontWeight:'bold'}}>Account Name:</Text>
-                                <Text>The Spring Cafe</Text>
+                                <Text>The Spring Cafe.</Text>
                             </View>
                             <Text>A confirmatory mail will be sent to your email to confirm payment.</Text>
                         </View>
@@ -104,7 +104,7 @@ const PaymentMethod = ({route, navigation}) => {
 
                 
             </View>
-             <View style={{backgroundColor: '#beb6c0',  padding:16}}>
+            <View style={{backgroundColor: '#beb6c0',  padding:16}}>
                 <View style={{justifyContent:'space-between', flexDirection:'row', alignItems:'center'}}>
                     <View>
                         <Text style={{fontWeight: 'bold', fontSize:16}}>Total:</Text>
