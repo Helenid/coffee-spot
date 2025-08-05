@@ -1,5 +1,6 @@
 import React from "react";
 import { Modal, View, Pressable, StyleSheet } from "react-native";
+import Colors from "./color";
 
 
 const AppModal = ({
